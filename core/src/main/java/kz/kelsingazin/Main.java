@@ -13,6 +13,20 @@ public class Main {
     public static void main(String[] args) {
         log.info("Guess the number game");
 
+        //Create context
+        ConfigurableApplicationContext context =
+                new ClassPathXmlApplicationContext(CONFIG_LOCATION);
+        NumberGenerator numberGenerator =
+                context.getBean("numberGenerator", NumberGenerator.class);
+
+        //Call method next() for random number
+        int number = numberGenerator.next();
+
+        //log generated number
+        log.info("number = {}", number);
+
+        //close context
+        context.close();
 
 
     }
