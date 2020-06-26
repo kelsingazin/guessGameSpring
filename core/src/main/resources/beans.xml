@@ -6,4 +6,8 @@
 
     <bean id="numberGenerator" class="kz.kelsingazin.NumberGeneratorImpl"/>
 
+    <bean id="game" class="kz.kelsingazin.GameImpl">
+        <constructor-arg ref="numberGenerator"/>
+    </bean>
+
 </beans>

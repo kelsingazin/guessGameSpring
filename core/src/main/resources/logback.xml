@@ -8,8 +8,8 @@
     </appender>
 
     <logger name="kz.kelsingazin" level="DEBUG"/>
-    <logger name="org.springframework" level="TRACE"/>
-    <root level="TRACE">
+<!--    <logger name="org.springframework" level="TRACE"/>-->
+    <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
     </root>
 </configuration>
